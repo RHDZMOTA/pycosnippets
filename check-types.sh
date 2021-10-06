@@ -1,0 +1,1 @@
+mypy src/pycosnippets --ignore-missing-imports --install-types --non-interactive
