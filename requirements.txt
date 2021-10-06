@@ -1,0 +1,7 @@
+# Databricks Runtime
+databricks-runtime==7.3.dev4
+# PyCo Dependencies
+Flask==2.0.1
+waitress==2.0.0
+fire==0.4.0
+celery[redis]==5.1.2
