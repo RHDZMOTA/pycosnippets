@@ -15,12 +15,6 @@ PYCO_NOTEBOOK_VERSION = int(os.environ.get(
     default=4
 ))
 
-# Celery
-PYCO_CELERY_BORKER_HOST = os.environ.get(
-    "PYCO_CELERY_BROKER_HOST",
-    default="127.0.0.1"
-)
-
 # Testing
 
 PYCO_TEST_SNIPPET = """
@@ -52,17 +46,6 @@ PYCO_NOTEBOOK_TEMPLATE_OUTPUT_PATH = os.environ.get(
 
 # Create template output path if not exists
 os.makedirs(PYCO_NOTEBOOK_TEMPLATE_OUTPUT_PATH, exist_ok=True)
-
-# Server configs
-PYCO_FLASK_HOST = os.environ.get(
-    "PYCO_FLASK_HOST",
-    default="127.0.0.1",
-)
-
-PYCO_FLASK_PORT = os.environ.get(
-    "PYCO_FLASK_PORT",
-    default="8080"
-)
 
 # Commandline
 
