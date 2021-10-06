@@ -27,12 +27,22 @@ notebook.execute()
 print(notebook.get_last_outputs())
 ```
 
-## Installation (development)
+## Relevant info
 
-Clone this repo and install locally with `pip`:
+Since we attempt to provide a controlled environment, this package is currently only
+available for a specific python version and only a few libraries are supported.
+
+For this reason, and to reduce compatibility issues, the Python version and default libraries are defined
+according to the [Databricks LTS runtime](https://docs.databricks.com/release-notes/runtime/releases.html). We install
+the runtime via [rhdzmota/databricks-runtime](https://github.com/RHDZMOTA/databricks-runtime) library.
+* Current runtime: `databricks-runtime==7.3.dev4`
+
+## Installation
+
+Install with pip:
 
 ```commandline
-$ pip install -e .
+$ pip install pycosnippets
 ```
 
 Test by running:
@@ -41,7 +51,7 @@ Test by running:
 $ pycosnippets hello-world
 ```
 
-Output: 
+Output:
 
 ```json
 [
@@ -57,6 +67,7 @@ Output:
     }
 ]
 ```
+
 
 ## Usage
 
@@ -196,4 +207,36 @@ output = pyco.run_code(
 )
 
 print(output)
+```
+
+
+## Development
+
+Clone this repo and install locally with `pip`:
+
+```commandline
+$ pip install -e .
+```
+
+Test by running:
+
+```commandline
+$ pycosnippets hello-world
+```
+
+Output:
+
+```json
+[
+    {
+        "data": {
+            "text/plain": [
+                "'Hello, Pythonista!'"
+            ]
+        },
+        "execution_count": 2,
+        "metadata": {},
+        "output_type": "execute_result"
+    }
+]
 ```
