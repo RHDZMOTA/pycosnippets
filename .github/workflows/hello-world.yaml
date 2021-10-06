@@ -1,10 +1,10 @@
-name: Publish
+name: Hello-World-Test
 
 on: [pull_request]
 
 jobs:
   build:
-    name: Hello-World Test
+    name: Testing basic hello-world command
     runs-on: ubuntu-18.04
     steps:
       - name: clone-repo
